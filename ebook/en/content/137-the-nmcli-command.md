@@ -114,69 +114,59 @@ nmcli [OPTIONS...] { help | general | networking | radio | connection | device |
 
 #### Options
 
-| **Short Flag** | **Long Flag**          | **Description**                                                                                 |
-| :------------- | :--------------------- | :---------------------------------------------------------------------------------------------- |
-| `-a`           | `--ask`                | nmcli will stop and ask for any missing required argument(do not use for non interactive options)            |
-| `-c`           | `--color`{yes/no}      | It controls color output. yes enables colors, while no disables colors                              |
-| `-h`           | `--help`               | Prints help information                                                                                     |
-| `-p`           | `--pretty`             | This causes nmcli to produce more user friendly output, eg with headers, and values are aligned                             |
-| `-v`           | `--version`            | Shows the nmcli version                                                                                         |
+| **Short Flag** | **Long Flag**          | **Description**                                                                                                |
+| :------------- | :--------------------- | :------------------------------------------------------------------------------------------------------------- |
+| `-a`           | `--ask`                | nmcli will stop and ask for any missing required argument(do not use for non interactive options)              |
+| `-c`           | `--color`{yes/no}      | It controls color output. yes enables colors, while no disables colors                                         |
+| `-h`           | `--help`               | Prints help information                                                                                        |
+| `-p`           | `--pretty`             | This causes nmcli to produce more user friendly output, eg with headers, and values are aligned                |
+| `-v`           | `--version`            | Shows the nmcli version                                                                                        |
 | `-f`           | `--fields`{field1,...} | This option is used to specify what fields should be printed. Valid fields names differ for specific commands. |
 | `-g`           | `--get-value`{field1,.}| This option is used to print values from specific field.  It is a shortcut for --mode tabular --terse --fields |
 
 #### General Commands
 
-| **Command**                    |**Description**                                           |
-| :----------------------------- | :-------------------------------------------------------- |
-| `nmcli general status`         | Show overall NetworkManager status                                                    |
-| `nmcli general hostname`       | Display current hostname                                                  |
+| **Command**                    |**Description**                                                       |
+| :----------------------------- | :------------------------------------------------------------------- |
+| `nmcli general status`         | Show overall NetworkManager status                                   |
+| `nmcli general hostname`       | Display current hostname                                             |
 
 #### Networking Commands
 
-| **Command**                    | **Description**                                           |
-| :----------------------------- | :-------------------------------------------------------- |
+| **Command**                    | **Description**                                                      |
+| :----------------------------- | :------------------------------------------------------------------- |
 | `nmcli networking on`          | Enable all networking                                                |
-| `nmcli networking off`         | Disable all networking                                                |
-| `nmcli networking connectivity`| Check network connectivity status                                                    |
+| `nmcli networking off`         | Disable all networking                                               |
+| `nmcli networking connectivity`| Check network connectivity status                                    |
 
 #### Radio Commands
 
-| **Command**                    | **Description**                                           |
-| :----------------------------- | :-------------------------------------------------------- |
-| `nmcli radio wifi on`          | Enable Wi-Fi radio                                                     |
-| `nmcli radio wifi off`         | Disable Wi-Fi radio                                                     |
-| `nmcli radio all`              | Show status of all radio switches                                                  |
-| `nmcli radio wifi`             | Show Wi-Fi radio status                                                    |
+| **Command**                    | **Description**                                                      |
+| :----------------------------- | :------------------------------------------------------------------- |
+| `nmcli radio wifi on`          | Enable Wi-Fi radio                                                   |
+| `nmcli radio wifi off`         | Disable Wi-Fi radio                                                  |
+| `nmcli radio all`              | Show status of all radio switches                                    |
+| `nmcli radio wifi`             | Show Wi-Fi radio status                                              |
 
 #### Connection Management Commands
 
 | **Command**                                      | **Description**                                    |
 | :----------------------------------------------- | :------------------------------------------------- |
-| `nmcli connection show`                          | List all saved connection profiles                                |
-| `nmcli connection show --active`                 | List only active connections                                        |
-| `nmcli connection show "NAME"`                   | Show detailed info about specific connection                          |
-| `nmcli connection up "NAME"`                     | Activate a connection                                         |
-| `nmcli connection down "NAME"`                   | Deactivate a connection                                         |
-| `nmcli connection modify "NAME" [OPTIONS]`       | Modify connection settings                                           |
-| `nmcli connection delete "NAME"`                 | Delete a connection profile                                            |
-| `nmcli connection reload`                        | Reload all connection files from disk                                    |
+| `nmcli connection show`                          | List all saved connection profiles                 |
+| `nmcli connection show --active`                 | List only active connections                       |
+| `nmcli connection show "NAME"`                   | Show detailed info about specific connection       |
+| `nmcli connection up "NAME"`                     | Activate a connection                              |
+| `nmcli connection down "NAME"`                   | Deactivate a connection                            |
+| `nmcli connection modify "NAME" [OPTIONS]`       | Modify connection settings                         |
+| `nmcli connection delete "NAME"`                 | Delete a connection profile                        |
+| `nmcli connection reload`                        | Reload all connection files from disk              |
 
 #### Device Management Commands
 
-| **Command**                                      | **Description**                                           |
-| :----------------------------------------------- | :-------------------------------------------------------- |
-| `nmcli device status`                            | Show status of all devices                                                   |
-| `nmcli device show "DEVICE"`                     | Show detailed info for specific device                                                    |
-| `nmcli device disconnect "DEVICE"`               | Disconnect from a device                                                    |
-| `nmcli device wifi list`                         | List all available Wi-Fi networks                                                  |
-| `nmcli device wifi connect "SSID" password "PWD"`| Connect to password-protected Wi-Fi                                                     |
-
-#### Common Short Forms
-
-| **Short Form**                 | **Full Form**                   |
-| :----------------------------- | :------------------------------ |
-| `nmcli con show`               | `nmcli connection show`         |
-| `nmcli con up "NAME"`          | `nmcli connection up "NAME"`    |
-| `nmcli con down "NAME"`        | `nmcli connection down "NAME"`  |
-| `nmcli dev status`             | `nmcli device status`           |
-| `nmcli dev wifi list`          | `nmcli device wifi list`        |
+| **Command**                                      | **Description**                                    |
+| :----------------------------------------------- | :------------------------------------------------- |
+| `nmcli device status`                            | Show status of all devices                         |
+| `nmcli device show "DEVICE"`                     | Show detailed info for specific device             |
+| `nmcli device disconnect "DEVICE"`               | Disconnect from a device                           |
+| `nmcli device wifi list`                         | List all available Wi-Fi networks                  |
+| `nmcli device wifi connect "SSID" password "PWD"`| Connect to password-protected Wi-Fi                |
